@@ -1,0 +1,17 @@
+.horizontalcarousel {
+  width: 99999px; /* needs to be big enough so carousel plus clones do not flow onto more then one line */
+}
+
+.carouselwidgetstrip {
+  position: relative;
+
+  &.vertical {
+    > .carouselItem {
+      display: block;
+    }
+  }
+
+  > .button {
+    margin: 0;
+  }
+}

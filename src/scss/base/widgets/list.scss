@@ -1,0 +1,17 @@
+.horizontallist,
+.verticallist {
+  position: relative;
+}
+
+// Horizontal carousel widgets
+
+// the mask is the top level of the carousel and defines where it is displayed and how much is visible
+.horizontallistmask {
+  overflow: hidden;
+  width: 100%;
+
+  // ensure nested carousels have correct formatting, you may need to target IDs in complex layouts
+  .horizontallist .listitem {
+    display: inline-block;
+  }
+}
