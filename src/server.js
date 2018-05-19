@@ -2,8 +2,6 @@ const express = require('express');
 const app = express();
 const TALFramework = require('tal');
 const mustacheExpress = require('mustache-express');
-const versionInfo = require('./static/version.json');
-const config = require('./static/config.json');
 const bodyParser = require('body-parser');
 const request = require('request');
 
@@ -23,14 +21,12 @@ app.get('/', function(req, res) {
   console.log(req.get('user-agent'));
 
   // Path to device configuration directory
-  const configPath = 'static/config';
+  const configPath = 'node_modules/tal/config';
   const antie = new TALFramework(configPath);
 
   // Get normalised brand and model from url parameters
   const device_brand = antie.normaliseKeyNames(req.query.brand || 'default');
   const device_model = antie.normaliseKeyNames(req.query.model || 'webkit');
-  // let device_brand = antie.normaliseKeyNames(req.query.brand || 'hisense');
-  // let device_model = antie.normaliseKeyNames(req.query.model || 'tv_2018');
 
   // Load framework device config files, named BRAND-MODEL-default.json
   let device_configuration;
@@ -62,13 +58,12 @@ app.get('/', function(req, res) {
     application_id: application_id,
     device_configuration: device_configuration,
     extra_body: antie.getDeviceBody(device_configuration_decoded),
-    version: versionInfo.version,
-    config: JSON.stringify(config, null, '  ')
+    version: 'meetup'
   });
 });
 
 app.use('/tal', express.static('node_modules/tal'));
-app.use('/static', express.static('static'));
+app.use('/static', express.static('dist/static'));
 
 app.listen(settings.listenPort, () => {
   console.log('meetup TAL app listening on port ' + settings.listenPort);

@@ -7,7 +7,7 @@
     "clean": "rm -rf dist/*",
     "build": "npm run clean && gulp prod",
     "dev": "npm run clean && gulp dev",
-    "start": "node server.js",
+    "start": "node dist/server.js",
     "test": "echo 'No Tests'"
   },
   "keywords": [],

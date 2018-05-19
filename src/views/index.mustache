@@ -1,21 +1,19 @@
 {{{ root_html_tag }}}
 
 <head>
-    <meta name="viewport" content="width=device-width{{!, height=deviceheight}}">
-    <link rel="icon" type="image/png" href="/static/favicon.png"> {{{ headers }}}
+    <meta name="viewport" content="width=device-width">
+    {{{ headers }}}
 
     <script type='text/javascript'>
         var appVersion = "{{{ version }}}";
-        var config = {{{ config }}};
     </script>
 
     <script type='text/javascript'>
         var require = {
             baseUrl: '',
             paths: {
-                wctal: 'static/script',
+                meetup: 'static/script',
                 antie: 'tal/static/script',
-                diva: 'static/script/appui/diva'
             },
             urlArgs: 'v=' + appVersion,
             priority: [],

@@ -15,6 +15,22 @@ const SCSS_BASE_PATH = 'src/scss';
 const IMG_BASE_PATH = 'src/assets/img';
 const ES6_BASE_PATH = 'src/appui';
 
+gulp.task('copyserver', () => {
+  return gulp.src('src/*.js').pipe(gulp.dest('./dist'));
+});
+
+gulp.task('copyserver:watch', () => {
+  return gulp.watch('src/*.js', ['copyserver']);
+});
+
+gulp.task('copymustache', () => {
+  return gulp.src('src/views/*').pipe(gulp.dest('./dist/views'));
+});
+
+gulp.task('copymustache:watch', () => {
+  return gulp.watch('src/views/*', ['copymustache']);
+});
+
 // transpile es6 to js
 gulp.task('babel', () => {
   return gulp
@@ -174,6 +190,8 @@ gulp.task('images:watch', function() {
 });
 
 gulp.task('static', [
+  'copyserver',
+  'copymustache',
   'sass-base',
   'sass-540',
   'sass-720',
@@ -183,6 +201,8 @@ gulp.task('static', [
 ]);
 
 gulp.task('watch', [
+  'copyserver:watch',
+  'copymustache:watch',
   'babel:watch',
   'sass-base:watch',
   'sass-540:watch',
