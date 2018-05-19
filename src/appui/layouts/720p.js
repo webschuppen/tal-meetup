@@ -1,5 +1,3 @@
-'use strict';
-
 require.def('wctal/appui/layouts/720p', {
   classes: ['layout720p'],
   css: ['layouts/720p.css?v=' + appVersion],
@@ -8,4 +6,3 @@ require.def('wctal/appui/layouts/720p', {
     height: 720
   }
 });
-//# sourceMappingURL=720p.js.map
