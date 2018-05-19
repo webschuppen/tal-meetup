@@ -34,7 +34,6 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "i": "^0.3.6",
     "mustache-express": "^1.2.5",
     "request": "^2.85.0",
     "tal": "^8.1.1"

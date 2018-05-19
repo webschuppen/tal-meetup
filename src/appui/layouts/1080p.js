@@ -1,5 +1,3 @@
-'use strict';
-
 require.def('meetup/appui/layouts/1080p', {
   classes: ['layout1080p'],
   css: ['layouts/1080p.css?v=' + appVersion],
@@ -8,4 +6,3 @@ require.def('meetup/appui/layouts/1080p', {
     height: 1080
   }
 });
-//# sourceMappingURL=1080p.js.map
