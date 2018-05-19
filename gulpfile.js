@@ -37,7 +37,7 @@ gulp.task('babel', () => {
     .src(`${ES6_BASE_PATH}/**/*.js`)
     .pipe(babel())
     .pipe(uglify())
-    .pipe(gulp.dest('./static/script/appui'));
+    .pipe(gulp.dest('./dist/static/script/appui'));
 });
 
 // transpile es6 to js
