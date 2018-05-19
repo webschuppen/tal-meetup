@@ -1,4 +1,4 @@
-require.def('wctal/appui/layouts/540p', {
+require.def('meetup/appui/layouts/540p', {
   classes: ['layout540p'],
   css: ['layouts/540p.css?v=' + appVersion],
   requiredScreenSize: {
