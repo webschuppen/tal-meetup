@@ -23,12 +23,12 @@ app.get('/', function(req, res) {
   console.log(req.get('user-agent'));
 
   // Path to device configuration directory
-  let configPath = 'static/config';
-  let antie = new TALFramework(configPath);
+  const configPath = 'static/config';
+  const antie = new TALFramework(configPath);
 
   // Get normalised brand and model from url parameters
-  let device_brand = antie.normaliseKeyNames(req.query.brand || 'default');
-  let device_model = antie.normaliseKeyNames(req.query.model || 'webkit');
+  const device_brand = antie.normaliseKeyNames(req.query.brand || 'default');
+  const device_model = antie.normaliseKeyNames(req.query.model || 'webkit');
   // let device_brand = antie.normaliseKeyNames(req.query.brand || 'hisense');
   // let device_model = antie.normaliseKeyNames(req.query.model || 'tv_2018');
 
@@ -48,13 +48,13 @@ app.get('/', function(req, res) {
   }
 
   // Substitute application_id wherever /%application%/ token is present in device configuration
-  let application_id = 'meetuptal';
+  const application_id = 'meetup';
   device_configuration = device_configuration.replace(
     /%application%/g,
     application_id
   );
 
-  let device_configuration_decoded = JSON.parse(device_configuration);
+  const device_configuration_decoded = JSON.parse(device_configuration);
 
   res.render('index', {
     root_html_tag: antie.getRootHtmlTag(device_configuration_decoded),

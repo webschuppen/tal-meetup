@@ -1,8 +1,7 @@
-define('wctal/appui/wctal', [
+define('meetup/appui/application', [
   'antie/application',
   'antie/widgets/container',
-  'antie/storageprovider',
-  'wctal/appui/utils'
+  'antie/storageprovider'
 ], (Application, Container, StorageProvider) =>
   Application.extend({
     init: function init(appDiv, styleDir, imgDir, callback) {

@@ -1,0 +1,63 @@
+{{{ root_html_tag }}}
+
+<head>
+    <meta name="viewport" content="width=device-width{{!, height=deviceheight}}">
+    <link rel="icon" type="image/png" href="/static/favicon.png"> {{{ headers }}}
+
+    <script type='text/javascript'>
+        var appVersion = "{{{ version }}}";
+        var config = {{{ config }}};
+    </script>
+
+    <script type='text/javascript'>
+        var require = {
+            baseUrl: '',
+            paths: {
+                wctal: 'static/script',
+                antie: 'tal/static/script',
+                diva: 'static/script/appui/diva'
+            },
+            urlArgs: 'v=' + appVersion,
+            priority: [],
+            callback: function () {
+            }
+        };
+    </script> {{> imports}}
+
+    <script>
+        var antie = {
+            framework: {
+                deviceConfiguration: {{{ device_configuration }}}
+            }
+        };
+    </script>
+
+</head>
+
+<body style='background: #041a2b;' class="loading">
+    {{{ extra_body }}} {{{ info }}}
+    <div class="splashscreen">
+        <img src="static/img/applogo.png" class="splashscreen__logo" />
+    </div>
+    <div id="app" class="display-none"></div>
+
+    <script type='text/javascript'>
+        require(
+            ['meetup/appui/application'],
+            function (TalApp) {
+                var onReady = function () {
+                    console.log('ready');
+                };
+
+                new TalApp(
+                    document.getElementById('app'),
+                    'static/style/',
+                    'static/img/',
+                    onReady
+                );
+            }
+        );
+    </script>
+</body>
+
+</html>
