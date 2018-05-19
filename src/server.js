@@ -58,7 +58,7 @@ app.get('/', function(req, res) {
     application_id: application_id,
     device_configuration: device_configuration,
     extra_body: antie.getDeviceBody(device_configuration_decoded),
-    version: 'meetup'
+    version: '0.0.1'
   });
 });
 

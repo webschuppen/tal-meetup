@@ -27,9 +27,9 @@ define('meetup/appui/application', [
 
       this.setRootContainer();
 
-      this.addComponentContainer(
-        'maincontainer',
-        'meetup/appui/components/start'
-      );
+      // this.addComponentContainer(
+      //   'maincontainer',
+      //   'meetup/appui/components/start'
+      // );
     }
   }));
