@@ -1,0 +1,14 @@
+#static-loading-screen {
+  position: absolute;
+  margin-top: 100px;
+  z-index: 100;
+  width: 100%;
+}
+
+#static-loading-screen p {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 0 50px;
+}
