@@ -25,11 +25,14 @@ define('meetup/appui/application', [
         error: console.error
       };
 
+      // remove loading screen
+      document.body.classList.remove('loading');
+
       this.setRootContainer();
 
-      // this.addComponentContainer(
-      //   'maincontainer',
-      //   'meetup/appui/components/start'
-      // );
+      this.addComponentContainer(
+        'maincontainer',
+        'meetup/appui/components/start'
+      );
     }
   }));

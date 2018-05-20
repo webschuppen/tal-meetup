@@ -4,6 +4,7 @@
 
 .carouselwidgetstrip {
   position: relative;
+  white-space: nowrap;
 
   &.vertical {
     > .carouselItem {
@@ -13,5 +14,11 @@
 
   > .button {
     margin: 0;
+  }
+
+  &.horizontal {
+    > .carouselItem {
+      display: inline-block;
+    }
   }
 }
