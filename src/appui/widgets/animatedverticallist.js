@@ -18,8 +18,6 @@ define('meetup/appui/widgets/animatedverticallist', [
     },
 
     setVisibles: function setVisibles(activeIndex) {
-      const childWidgets = this.getChildWidgets();
-
       this.getChildWidgets().forEach((item, index) => {
         if (index <= activeIndex) {
           item.addClass('avl__item--visible');
