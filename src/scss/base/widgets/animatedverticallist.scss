@@ -1,0 +1,9 @@
+.avl {
+  .listitem {
+    opacity: 1;
+
+    &:not(.visible) {
+      opacity: 0;
+    }
+  }
+}

@@ -19,9 +19,9 @@ define('meetup/appui/components/start', [
       );
 
       const slides = [
-        { title: 'Wow this is a slide' },
-        { title: 'yay 🎉' },
-        { title: 'I think it works' }
+        { title: 'Wow this is a slide', items: ['One', 'Two', 'Three'] },
+        { title: 'yay 🎉', items: ['One', 'Two', 'Three', 'Four'] },
+        { title: 'I think it works', items: ['One', 'Two', 'Three'] }
       ];
       const { width, height } = this.getCurrentApplication().getBestFitLayout();
 
