@@ -7,6 +7,10 @@ define('meetup/appui/widgets/animatedverticallist', [
       itemFormatter,
       dataSource
     } = {}) {
+      if (Array.isArray(dataSource)) {
+        dataSource.unshift('');
+      }
+
       init.base.call(this, id, itemFormatter, dataSource);
       this.addClass('avl');
 

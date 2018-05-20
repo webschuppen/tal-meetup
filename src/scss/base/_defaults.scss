@@ -31,8 +31,7 @@ body {
     top: 0;
     left: 0;
     z-index: 99999;
-    background: url('../img/splash.jpg') no-repeat center center;
-    background-size: cover;
+    background: rgb(211, 37, 40);
     display: none;
 
     &__logo {
