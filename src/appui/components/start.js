@@ -19,7 +19,15 @@ define('meetup/appui/components/start', [
       );
 
       const slides = [
-        { title: 'Wow this is a slide', items: ['One', 'Two', 'Three'] },
+        {
+          title: 'Was ist TAL?',
+          items: [
+            '• TAL steht für TV Application Layer',
+            '• Es wurde von der BBC für interne Zwecke entwickelt',
+            '• TAL ist ein Javascript Framework',
+            '• Es ermöglicht mit geringem Aufwand für viele Embedded-Devices zu entwickeln'
+          ]
+        },
         { title: 'yay 🎉', items: ['One', 'Two', 'Three', 'Four'] },
         { title: 'I think it works', items: ['One', 'Two', 'Three'] }
       ];
