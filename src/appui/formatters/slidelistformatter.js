@@ -9,7 +9,7 @@ define('meetup/appui/formatters/slidelistformatter', [
 
       return render(
         <Button>
-          <Label>- {item}</Label>
+          <Label>{item}</Label>
         </Button>
       );
     }
