@@ -39,7 +39,7 @@ define('meetup/appui/components/start', [
         {
           title: 'Cons',
           items: [
-            '• Nutzt intern AMD/requirejs',
+            '• Nutzt intern AMD / requirejs',
             '• Teilweise sehr umständlich',
             '• Relativ kleine Community'
           ]
