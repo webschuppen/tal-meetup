@@ -24,12 +24,26 @@ define('meetup/appui/components/start', [
           items: [
             '• TAL steht für TV Application Layer',
             '• Es wurde von der BBC für interne Zwecke entwickelt',
-            '• TAL ist ein Javascript Framework',
-            '• Es ermöglicht mit geringem Aufwand für viele Embedded-Devices zu entwickeln'
+            '• TAL ist ein Javascript Framework'
           ]
         },
-        { title: 'yay 🎉', items: ['One', 'Two', 'Three', 'Four'] },
-        { title: 'I think it works', items: ['One', 'Two', 'Three'] }
+        {
+          title: 'Pros',
+          items: [
+            '• Eine Applikation für viele Geräte',
+            '• Etabliertes Framework (seit mehr als 5 Jahren)',
+            '• Viele vorbereitete Widgets',
+            '• Viele vorbereitete Device Configs'
+          ]
+        },
+        {
+          title: 'Cons',
+          items: [
+            '• Nutzt intern AMD/requirejs',
+            '• Teilweise sehr umständlich',
+            '• Relativ kleine Community'
+          ]
+        }
       ];
       const { width, height } = this.getCurrentApplication().getBestFitLayout();
 
