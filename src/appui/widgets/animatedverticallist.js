@@ -13,17 +13,25 @@ define('meetup/appui/widgets/animatedverticallist', [
       this.addEventListener('selecteditemchange', ({ index }) =>
         this.setVisibles(index)
       );
+
+      this.addEventListener('databound', () => this.addItemClass());
     },
 
-    setVisibles: function setVisibles(index) {
+    setVisibles: function setVisibles(activeIndex) {
       const childWidgets = this.getChildWidgets();
 
-      for (let i = 0; i < childWidgets.length; i += 1) {
-        if (i <= index) {
-          childWidgets[i].addClass('visible');
+      this.getChildWidgets().forEach((item, index) => {
+        if (index <= activeIndex) {
+          item.addClass('avl__item--visible');
         } else {
-          childWidgets[i].removeClass('visible');
+          item.removeClass('avl__item--visible');
         }
-      }
+      });
+    },
+
+    addItemClass: function addItemClass(className = 'avlItem') {
+      this.getChildWidgets().forEach(item => {
+        item.addClass('avl__item');
+      });
     }
   }));
