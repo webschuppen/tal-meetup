@@ -1,24 +1,27 @@
 define('meetup/appui/widgets/slide', [
-  'antie/widgets/button',
-  'antie/widgets/label'
-], (Button, Label) =>
-  Button.extend({
-    init: function init(props) {
+  'antie/widgets/container',
+  'antie/widgets/label',
+  'meetup/appui/formatters/slidelistformatter',
+  'meetup/appui/widgets/animatedverticallist'
+], (Container, Label, SlideListFormatter, AnimatedVerticalList) =>
+  Container.extend({
+    init: function init({ title, items }) {
       init.base.call(this);
       this.addClass('slide');
-      console.log(props);
 
       this.appendChildWidget(
         render(
           <Label>
-            <h1>{props.title}</h1>
-            <ul>
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-            </ul>
+            <h1>{title}</h1>
           </Label>
         )
       );
+
+      const list = new AnimatedVerticalList({
+        dataSource: items,
+        itemFormatter: new SlideListFormatter()
+      });
+      this.appendChildWidget(list);
+      list.focus();
     }
   }));
