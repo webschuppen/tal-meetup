@@ -94,7 +94,15 @@ define('meetup/appui/components/presentation', [
           ],
           startEmpty: false
         },
-        { title: 'Der Mediaplayer', items: [] },
+        {
+          title: 'Der Mediaplayer',
+          items: [
+            '• HTML5 Video / Audio',
+            '• Formate abhängig von Device !!',
+            '• Steuerung frei definierbar (nichts vorgegeben)',
+            '• Durch zusätzliche Widgets unterstützt (Progress)'
+          ]
+        },
         {
           title: 'Links',
           items: [
