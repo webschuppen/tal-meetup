@@ -40,6 +40,7 @@ define('meetup/appui/components/presentation', [
           title: 'Was ist TAL?',
           items: [
             '• TAL steht für TV Application Layer',
+            '• Tal ist Open Source mit der Apache-2.0 Lizenz',
             '• Es wurde von der BBC für interne Zwecke entwickelt',
             '• TAL ist ein JavaScript Framework'
           ]
