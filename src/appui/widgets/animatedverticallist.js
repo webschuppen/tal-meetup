@@ -1,40 +1,48 @@
 define('meetup/appui/widgets/animatedverticallist', [
+  'antie/widgets/container',
+  'antie/widgets/button',
+  'antie/widgets/label',
   'antie/widgets/verticallist'
-], VerticalList =>
-  VerticalList.extend({
-    init: function init({
-      id = 'animatedverticallist',
-      itemFormatter,
-      dataSource,
-      startEmpty = true
-    } = {}) {
-      if (Array.isArray(dataSource) && startEmpty) {
-        dataSource.unshift('');
+], (Container, Button, Label, VerticalList) =>
+  Container.extend({
+    init: function init({ items, startEmpty = true } = {}) {
+      if (!Array.isArray(items)) {
+        throw new Error('items is not an array');
       }
 
-      init.base.call(this, id, itemFormatter, dataSource);
+      if (startEmpty) {
+        items = ['', ...items];
+      }
+
+      init.base.call(this, 'animatedverticallist');
+
       this.addClass('avl');
 
-      this.addEventListener('selecteditemchange', ({ index }) =>
-        this.setVisibles(index)
-      );
+      const handler = ({ index }) => this.setVisibles(index);
 
-      this.addEventListener('databound', () => this.addItemClass());
+      this.appendChildWidget(
+        render(
+          <VerticalList
+            ref={list => (this.list = list)}
+            onSelectedItemChange={handler}
+          >
+            {items.map(item => (
+              <Button class="avl__item">
+                {typeof item === 'string' ? <Label>{item}</Label> : item}
+              </Button>
+            ))}
+          </VerticalList>
+        )
+      );
     },
 
     setVisibles: function setVisibles(activeIndex) {
-      this.getChildWidgets().forEach((item, index) => {
+      this.list.getChildWidgets().forEach((item, index) => {
         if (index <= activeIndex) {
           item.addClass('avl__item--visible');
         } else {
           item.removeClass('avl__item--visible');
         }
-      });
-    },
-
-    addItemClass: function addItemClass(className = 'avlItem') {
-      this.getChildWidgets().forEach(item => {
-        item.addClass('avl__item');
       });
     }
   }));
