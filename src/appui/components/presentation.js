@@ -52,7 +52,10 @@ define('meetup/appui/components/presentation', [
             '• Viele vorbereitete Widgets',
             '• Viele vorbereitete Device Configs',
             '• Navigation durch verschachtelte Widget-Struktur',
-            <Image src="https://bbc.github.io/tal/img/spatial_diagram_2.gif" />
+            <Image
+              src="https://bbc.github.io/tal/img/spatial_diagram_2.gif"
+              class="spital"
+            />
           ]
         },
         {
@@ -74,10 +77,20 @@ define('meetup/appui/components/presentation', [
           ]
         },
         {
+          title: 'Links',
+          items: [
+            '• http://bbc.github.io/tal/',
+            '• https://github.com/lionralfs/tal-jsx',
+            <Label class="presentationlink">
+              • https://github.com/webschuppen/tal-meetup
+            </Label>
+          ]
+        },
+        {
           title: 'Ummmmm',
           items: [
-            <Label>wow cool</Label>,
-            <Label>bilder gehen auch</Label>,
+            <Label>• wow cool</Label>,
+            <Label>• Bilder gehen auch</Label>,
             <Image src="http://www.abc.net.au/news/image/8834718-3x2-940x627.jpg" />
           ]
         }
