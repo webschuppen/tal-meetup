@@ -5,9 +5,10 @@ define('meetup/appui/widgets/animatedverticallist', [
     init: function init({
       id = 'animatedverticallist',
       itemFormatter,
-      dataSource
+      dataSource,
+      startEmpty = true
     } = {}) {
-      if (Array.isArray(dataSource)) {
+      if (Array.isArray(dataSource) && startEmpty) {
         dataSource.unshift('');
       }
 

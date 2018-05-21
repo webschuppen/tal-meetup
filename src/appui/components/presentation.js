@@ -54,7 +54,7 @@ define('meetup/appui/components/presentation', [
             '• Navigation durch verschachtelte Widget-Struktur',
             <Image
               src="https://bbc.github.io/tal/img/spatial_diagram_2.gif"
-              class="spital"
+              class="spatial"
             />
           ]
         },
@@ -63,7 +63,7 @@ define('meetup/appui/components/presentation', [
           items: [
             '• Nutzt intern AMD / requirejs',
             '• Teilweise sehr umständlich',
-            '• Relativ kleine Community'
+            '• Relativ kleine Community (aber wachsend)'
           ]
         },
         {
@@ -77,10 +77,13 @@ define('meetup/appui/components/presentation', [
           ]
         },
         {
-          title: 'Component Lifecycle',
+          title: '"Component Lifecycle"',
           items: [
-            'Verschiedene Events, welche im Lebenszyklus einer Component gefeuert werden.',
-            'Events werden mit einem Eventlistener an die Componenete gebunden',
+            <Label>
+              Verschiedene Events, welche im Lebenszyklus einer Komponente
+              gefeuert werden. <br />Events können per addEventListener an der
+              Komponente aufgefangen und behandelt werden.
+            </Label>,
             '• load (einmalig)',
             '• beforerender',
             '• beforeshow',
@@ -89,22 +92,15 @@ define('meetup/appui/components/presentation', [
             '• afterhide'
           ]
         },
+        { title: 'Der Mediaplayer', items: [] },
         {
           title: 'Links',
           items: [
-            '• http://bbc.github.io/tal/',
+            '• https://bbc.github.io/tal/',
             '• https://github.com/lionralfs/tal-jsx',
             <Label class="presentationlink">
               • https://github.com/webschuppen/tal-meetup
             </Label>
-          ]
-        },
-        {
-          title: 'Ummmmm',
-          items: [
-            <Label>• wow cool</Label>,
-            <Label>• Bilder gehen auch</Label>,
-            <Image src="http://www.abc.net.au/news/image/8834718-3x2-940x627.jpg" />
           ]
         }
       ];
