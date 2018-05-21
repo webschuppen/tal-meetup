@@ -77,6 +77,19 @@ define('meetup/appui/components/presentation', [
           ]
         },
         {
+          title: 'Component Lifecycle',
+          items: [
+            'Verschiedene Events, welche im Lebenszyklus einer Component gefeuert werden.',
+            'Events werden mit einem Eventlistener an die Componenete gebunden',
+            '• load (einmalig)',
+            '• beforerender',
+            '• beforeshow',
+            '• aftershow',
+            '• beforehide',
+            '• afterhide'
+          ]
+        },
+        {
           title: 'Links',
           items: [
             '• http://bbc.github.io/tal/',
