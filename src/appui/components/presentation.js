@@ -81,8 +81,9 @@ define('meetup/appui/components/presentation', [
           items: [
             <Label>
               Verschiedene Events, welche im Lebenszyklus einer Komponente
-              gefeuert werden. <br />Events können per addEventListener an der
-              Komponente aufgefangen und behandelt werden.
+              gefeuert werden. <br />
+              Events können per addEventListener an der Komponente aufgefangen
+              und behandelt werden.
             </Label>,
             '• load (einmalig)',
             '• beforerender',
