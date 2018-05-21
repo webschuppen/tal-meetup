@@ -90,7 +90,8 @@ define('meetup/appui/components/presentation', [
             '• aftershow',
             '• beforehide',
             '• afterhide'
-          ]
+          ],
+          startEmpty: false
         },
         { title: 'Der Mediaplayer', items: [] },
         {

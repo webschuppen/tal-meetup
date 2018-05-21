@@ -5,7 +5,7 @@ define('meetup/appui/widgets/slide', [
   'meetup/appui/widgets/animatedverticallist'
 ], (Container, Label, SlideListFormatter, AnimatedVerticalList) =>
   Container.extend({
-    init: function init({ title, items }) {
+    init: function init({ title, items, startEmpty = true }) {
       init.base.call(this);
       this.addClass('slide');
 
@@ -21,7 +21,8 @@ define('meetup/appui/widgets/slide', [
 
       const list = new AnimatedVerticalList({
         dataSource: items,
-        itemFormatter: new SlideListFormatter()
+        itemFormatter: new SlideListFormatter(),
+        startEmpty
       });
       inner.appendChildWidget(list);
       list.focus();
