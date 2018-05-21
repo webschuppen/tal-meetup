@@ -9,7 +9,9 @@ define('meetup/appui/widgets/slide', [
       init.base.call(this);
       this.addClass('slide');
 
-      this.appendChildWidget(
+      const inner = render(<Container class="slide__inner" />);
+
+      inner.appendChildWidget(
         render(
           <Label>
             <h1>{title}</h1>
@@ -21,7 +23,9 @@ define('meetup/appui/widgets/slide', [
         dataSource: items,
         itemFormatter: new SlideListFormatter()
       });
-      this.appendChildWidget(list);
+      inner.appendChildWidget(list);
       list.focus();
+
+      this.appendChildWidget(inner);
     }
   }));

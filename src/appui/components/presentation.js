@@ -2,9 +2,19 @@ define('meetup/appui/components/presentation', [
   'antie/widgets/component',
   'antie/widgets/carousel',
   'antie/widgets/carousel/keyhandlers/activatefirsthandler',
+  'antie/widgets/image',
+  'antie/widgets/label',
   'antie/events/keyevent',
   'meetup/appui/widgets/slide'
-], (Component, Carousel, ActivateFirstHandler, KeyEvent, Slide) => {
+], (
+  Component,
+  Carousel,
+  ActivateFirstHandler,
+  Image,
+  Label,
+  KeyEvent,
+  Slide
+) => {
   return Component.extend({
     init: function init() {
       init.base.call(this, 'my-component-id');
@@ -49,6 +59,14 @@ define('meetup/appui/components/presentation', [
             '• Nutzt intern AMD / requirejs',
             '• Teilweise sehr umständlich',
             '• Relativ kleine Community'
+          ]
+        },
+        {
+          title: 'Ummmmm',
+          items: [
+            <Label>wow cool</Label>,
+            <Label>bilder gehen auch</Label>,
+            <Image src="http://www.abc.net.au/news/image/8834718-3x2-940x627.jpg" />
           ]
         }
       ];

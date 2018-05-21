@@ -9,7 +9,7 @@ define('meetup/appui/formatters/slidelistformatter', [
 
       return render(
         <Button>
-          <Label>{item}</Label>
+          {typeof item === 'string' ? <Label>{item}</Label> : item}
         </Button>
       );
     }
