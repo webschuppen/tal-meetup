@@ -47,10 +47,12 @@ define('meetup/appui/components/presentation', [
         {
           title: 'Pros',
           items: [
-            '• Eine Applikation für viele Geräte',
+            '• "One Application - multiple devices"',
             '• Etabliertes Framework (seit mehr als 5 Jahren)',
             '• Viele vorbereitete Widgets',
-            '• Viele vorbereitete Device Configs'
+            '• Viele vorbereitete Device Configs',
+            '• Navigation durch verschachtelte Widget-Struktur',
+            <Image src="https://bbc.github.io/tal/img/spatial_diagram_2.gif" />
           ]
         },
         {
@@ -59,6 +61,16 @@ define('meetup/appui/components/presentation', [
             '• Nutzt intern AMD / requirejs',
             '• Teilweise sehr umständlich',
             '• Relativ kleine Community'
+          ]
+        },
+        {
+          title: 'Wie wir es einsetzen',
+          items: [
+            '• NodeJS server',
+            '• Device configuration aus URL Parametern auslesen',
+            '• Config per mustache in den DOM rendern',
+            '• TAL clientseitig per requirejs initialisieren',
+            '• TAL liest device config ein und lädt Gerätespezifische Module nach (bzw. bindet gewisse Keyhandler)'
           ]
         },
         {
