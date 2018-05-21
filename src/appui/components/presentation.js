@@ -41,7 +41,7 @@ define('meetup/appui/components/presentation', [
           items: [
             '• TAL steht für TV Application Layer',
             '• Es wurde von der BBC für interne Zwecke entwickelt',
-            '• TAL ist ein Javascript Framework'
+            '• TAL ist ein JavaScript Framework'
           ]
         },
         {
