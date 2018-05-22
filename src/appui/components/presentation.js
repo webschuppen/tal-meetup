@@ -109,6 +109,7 @@ define('meetup/appui/components/presentation', [
           items: [
             '• https://bbc.github.io/tal/',
             '• https://github.com/lionralfs/tal-jsx',
+            '• https://github.com/bbc/talexample',
             <Label class="presentationlink">
               • https://github.com/webschuppen/tal-meetup
             </Label>
