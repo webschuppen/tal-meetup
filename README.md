@@ -2,6 +2,8 @@
 
 This is a simple presentation made to present TAL on the Web App Devs meetup in Hamburg.
 
+https://www.meetup.com/de-DE/Web-App-Devs-HH/
+
 ## Setup
 
 * npm install
