@@ -1,6 +1,7 @@
 define('meetup/appui/components/presentation', [
   'antie/widgets/component',
   'antie/widgets/carousel',
+  'antie/widgets/container',
   'antie/widgets/carousel/keyhandlers/activatefirsthandler',
   'antie/widgets/image',
   'antie/widgets/label',
@@ -9,6 +10,7 @@ define('meetup/appui/components/presentation', [
 ], (
   Component,
   Carousel,
+  Container,
   ActivateFirstHandler,
   Image,
   Label,
@@ -49,6 +51,7 @@ define('meetup/appui/components/presentation', [
           title: 'Pros',
           items: [
             '• "One Application - multiple devices"',
+            '• Hosted-Web-App',
             '• Etabliertes Framework (seit mehr als 5 Jahren)',
             '• Viele vorbereitete Widgets',
             '• Viele vorbereitete Device Configs',
@@ -80,7 +83,7 @@ define('meetup/appui/components/presentation', [
         {
           title: '"Component Lifecycle"',
           items: [
-            <Label>
+            <Label class="margin-bottom">
               Verschiedene Events, welche im Lebenszyklus einer Komponente
               gefeuert werden. <br />
               Events können per addEventListener an der Komponente aufgefangen
@@ -103,6 +106,22 @@ define('meetup/appui/components/presentation', [
             '• Steuerung frei definierbar (nichts vorgegeben)',
             '• Durch zusätzliche Widgets unterstützt (Progress)'
           ]
+        },
+        {
+          title: 'Apps powered by TAL',
+          items: [
+            <Container class="app-logos">
+              <Image src="static/img/nfl-gp-logo.jpg" />
+              <Image src="static/img/bbc-iplayer-logo.png" />
+              <Image src="static/img/bbc-news-icon.png" />
+              <Image src="static/img/bbc-sport-logo.png" />
+            </Container>,
+            <Container class="app-screens">
+              <Image src="static/img/bbc-iplayer.jpg" />
+              <Image src="static/img/bbc-iplayer.jpg" />
+            </Container>
+          ],
+          startEmpty: false
         },
         {
           title: 'Links',

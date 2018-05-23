@@ -6,6 +6,7 @@
 
   &__inner {
     position: absolute;
+    width: calc(100% - 100px);
   }
 
   &:nth-child(even) {
