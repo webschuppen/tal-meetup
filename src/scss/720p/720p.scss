@@ -8,3 +8,11 @@
   margin: 0;
   transform: translate(-50%, -50%);
 }
+
+.app {
+  &-logos {
+    > div {
+      width: 150px;
+    }
+  }
+}
