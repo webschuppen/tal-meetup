@@ -39,6 +39,22 @@ define('meetup/appui/components/presentation', [
 
       const slides = [
         {
+          title: 'Person',
+          items: [
+            <Container>
+              <Label>
+                Daniel Klessa<br />
+              </Label>
+              <Label>
+                Senior Web Developer<br />
+                <br />
+              </Label>
+              <Label>webschuppen GmbH</Label>
+            </Container>
+          ],
+          startEmpty: false
+        },
+        {
           title: 'Was ist TAL?',
           items: [
             '• TAL steht für TV Application Layer',
