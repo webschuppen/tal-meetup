@@ -1,15 +1,16 @@
 define('meetup/appui/widgets/slide', [
   'antie/widgets/container',
   'antie/widgets/label',
-  'meetup/appui/formatters/slidelistformatter',
   'meetup/appui/widgets/animatedverticallist'
-], (Container, Label, SlideListFormatter, AnimatedVerticalList) =>
+], (Container, Label, AnimatedVerticalList) =>
   Container.extend({
-    init: function init({ title, items }) {
+    init: function init({ title, items, startEmpty = true }) {
       init.base.call(this);
       this.addClass('slide');
 
-      this.appendChildWidget(
+      const inner = render(<Container class="slide__inner" />);
+
+      inner.appendChildWidget(
         render(
           <Label>
             <h1>{title}</h1>
@@ -18,10 +19,12 @@ define('meetup/appui/widgets/slide', [
       );
 
       const list = new AnimatedVerticalList({
-        dataSource: items,
-        itemFormatter: new SlideListFormatter()
+        items,
+        startEmpty
       });
-      this.appendChildWidget(list);
+      inner.appendChildWidget(list);
       list.focus();
+
+      this.appendChildWidget(inner);
     }
   }));

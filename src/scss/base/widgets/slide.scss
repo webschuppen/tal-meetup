@@ -2,6 +2,12 @@
   width: 100%;
   height: 100%;
   padding: 50px;
+  position: relative;
+
+  &__inner {
+    position: absolute;
+    width: calc(100% - 100px);
+  }
 
   &:nth-child(even) {
     background: black;
