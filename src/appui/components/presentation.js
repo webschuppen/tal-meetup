@@ -16,19 +16,16 @@ define('meetup/appui/components/presentation', [
   Label,
   KeyEvent,
   Slide
-) => {
-  return Component.extend({
+) =>
+  Component.extend({
     init: function init() {
-      init.base.call(this, 'my-component-id');
+      init.base.call(this, 'presentation');
 
       this.onBeforeRender = this.onBeforeRender.bind(this);
-      this.addEventListener('beforerender', this.onBeforeRender);
+      this.onKeyDown = this.onKeyDown.bind(this);
 
-      this.addEventListener('keydown', evt => {
-        if (evt.keyCode === KeyEvent.VK_BACK) {
-          this.parentWidget.back();
-        }
-      });
+      this.addEventListener('beforerender', this.onBeforeRender);
+      this.addEventListener('keydown', this.onKeyDown);
     },
 
     onBeforeRender: function onBeforeRender() {
@@ -59,6 +56,7 @@ define('meetup/appui/components/presentation', [
           items: [
             '• TAL steht für TV Application Layer',
             '• Tal ist Open Source mit der Apache-2.0 Lizenz',
+            '• Apps für Connected TV devices',
             '• Es wurde von der BBC für interne Zwecke entwickelt',
             '• TAL ist ein JavaScript Framework'
           ]
@@ -175,6 +173,18 @@ define('meetup/appui/components/presentation', [
       slideCarousel.recalculate();
 
       this.appendChildWidget(slideCarousel);
+    },
+
+    onKeyDown: function onKeyDown({ keyCode }) {
+      switch (keyCode) {
+        case KeyEvent.VK_BACK:
+          this.parentWidget.back();
+          break;
+        case KeyEvent.VK_PLAY_PAUSE:
+          this.getCurrentApplication().pushComponent(
+            'maincontainer',
+            'meetup/appui/components/meetup'
+          );
+      }
     }
-  });
-});
+  }));

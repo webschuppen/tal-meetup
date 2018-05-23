@@ -2,6 +2,7 @@
   "name": "tal-meetup",
   "version": "1.0.0",
   "description": "A tiny TAL app for presentation purposes",
+  "license": "Apache-2.0",
   "main": "server.js",
   "scripts": {
     "clean": "rm -rf dist/*",
