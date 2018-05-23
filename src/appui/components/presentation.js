@@ -73,6 +73,8 @@ define('meetup/appui/components/presentation', [
         {
           title: 'Wie wir es einsetzen',
           items: [
+            '• JSX mit tal-jsx von Lion Ralfs',
+            '• Compilen der clientseitigen Scripts mit Babel',
             '• NodeJS server',
             '• Device configuration aus URL Parametern auslesen',
             '• Config per mustache in den DOM rendern',
