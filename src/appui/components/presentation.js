@@ -36,22 +36,6 @@ define('meetup/appui/components/presentation', [
 
       const slides = [
         {
-          title: 'Person',
-          items: [
-            <Container>
-              <Label>
-                Daniel Klessa<br />
-              </Label>
-              <Label>
-                Senior Web Developer<br />
-                <br />
-              </Label>
-              <Label>webschuppen GmbH</Label>
-            </Container>
-          ],
-          startEmpty: false
-        },
-        {
           title: 'Was ist TAL?',
           items: [
             '• TAL steht für TV Application Layer',
@@ -134,7 +118,7 @@ define('meetup/appui/components/presentation', [
             </Container>,
             <Container class="app-screens">
               <Image src="static/img/bbc-iplayer.jpg" />
-              <Image src="static/img/bbc-iplayer.jpg" />
+              <Image src="static/img/nflgp.png" />
             </Container>
           ],
           startEmpty: false
@@ -149,6 +133,22 @@ define('meetup/appui/components/presentation', [
               • https://github.com/webschuppen/tal-meetup
             </Label>
           ]
+        },
+        {
+          title: 'Person',
+          items: [
+            <Container>
+              <Label>
+                Daniel Klessa<br />
+              </Label>
+              <Label>
+                Senior Web Developer<br />
+                <br />
+              </Label>
+              <Label>webschuppen GmbH</Label>
+            </Container>
+          ],
+          startEmpty: false
         }
       ];
       const { width, height } = this.getCurrentApplication().getBestFitLayout();
